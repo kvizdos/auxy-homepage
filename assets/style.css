@@ -1,0 +1,286 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.horzCenter {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2.title {
+    margin: 0;
+    padding: 0;
+    font-size: 3em;
+    color: #474747;
+}
+
+a {
+    text-decoration: none;
+    color: #4B77F0;
+    font-size: 1.5em;
+    padding-top: 10px;
+}
+
+ol {
+    columns: 1;
+    list-style: none;
+    counter-reset: item;
+    padding: 0 40px 0 40px;
+
+}
+
+ol li {
+    font-size: 2em;
+
+}
+
+footer {
+    background-color: #555FC5;
+    text-align: center;
+    padding: 50px;
+    font-size: 1.25em;
+    color: white;
+    margin-top: 50px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25em;
+}
+
+ol li:before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    color: #4B77F0;
+    font-weight: bold;
+}
+
+header {
+    width: 100%;
+    padding: 40px;
+}
+
+header p {
+    color: #3E3E3E;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0;
+}
+
+header span {
+    color: #555FC5;
+}
+
+header img {
+    width: 95%;
+    display: none;
+}
+
+header ul {
+    list-style: none;
+    font-size: 1.5em;
+}
+
+header ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #555FC5; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+header h1 {
+    font-weight: bold;
+    color: #555FC5;
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    width: 100%;
+}
+
+button {
+    background-color: #4B77F0;
+    border-radius: 35px;
+    outline: none;
+    padding: 15px 50px 15px 50px;
+    font-size: 1.25em;
+    width: 100%;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+section.bgColor {
+    position: relative;
+    background: linear-gradient(135deg, #4B77F0, #555FC5, #555FC5);
+}
+
+section.bgColor::before {
+    content: "";
+    background: url('./top.svg') no-repeat;
+    background-size: cover;
+    background-position: left top;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 170px;
+    animation: header 30s cubic-bezier(.42,.3,.58,.99) infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+section.bgColor::after {
+    content: "";
+    background: url(./bottom.svg) no-repeat;
+    background-position: center bottom;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-size: cover;
+}
+
+section.bgColor .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 40px 180px 40px;
+    padding-top: 190px;
+
+    text-align: center;
+    color: white;
+    align-items: unset !important;
+}
+
+section.bgColor .content h2 {
+    font-size: 2em;
+    margin: 0;
+    padding: 10px;
+}
+
+section.bgColor .content p {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+section.bgColor .content img {
+    width: 100%;
+    padding-top: 25px;
+}
+
+.getStarted {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.getStarted article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2em;
+}
+
+.getStarted article p {
+    padding: 0;
+    margin: 0;
+}
+
+.getStarted article a {    
+    color: black;
+    text-decoration: underline;
+    font-size: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+.cmd {
+    background-color: #444877;
+    padding: 10px !important;
+    border-radius: 5px;
+    color: white;
+    font-size: .55em;
+}
+
+@keyframes header {
+    0% {background-position: 0 0;}
+    100% {background-position: 100% 0;}
+}
+
+@media (min-width: 980px) {
+    .getStarted {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: unset;
+        width: 75%;
+        text-align: center;
+    }
+    
+    header {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-gap: 25px;
+        padding: 100px;
+    }
+
+    button {
+        font-size: 1.5em;
+        width: unset;
+    }
+
+    header p,
+    header ul {
+        font-size: 2em;
+    }
+
+    header article img {
+        display: unset;
+    }
+
+    section.bgColor .content {
+        padding: 350px 160px 200px 160px;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+        grid-gap: 50px;
+    }
+    
+    section.bgColor::before {
+        height: 300px;
+    }
+
+    h2.title {
+        font-size: 3em;
+    }
+
+    ol {
+        columns: 2;
+        column-gap: 25px;
+    }
+
+    ol li {
+        font-size: 2.15em;
+    }
+}
