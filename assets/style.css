@@ -92,6 +92,12 @@ header img {
     display: none;
 }
 
+header img.logo {
+    width: 100%;
+    display: inherit;
+    margin-bottom: 25px;
+}
+
 header ul {
     list-style: none;
     font-size: 1.5em;
@@ -257,6 +263,10 @@ section.bgColor .content img {
 
     header article img {
         display: unset;
+    }
+
+    header img.logo {
+        width: 50%;
     }
 
     section.bgColor .content {
