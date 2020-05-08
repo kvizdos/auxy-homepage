@@ -315,6 +315,20 @@ article.rounded {
     width: calc(100% - 100px)
 }
 
+p.soon {
+    font-size: 1.5em;
+    color: #c1c1c1;
+}
+
+#notifications .top p {
+    margin: 0;
+    padding: 0;
+}
+
+#notifications .bottom {
+    margin-top: 25px;
+}
+
 @media (min-width: 980px) {
     #notifications .content {
         padding: 100px;
