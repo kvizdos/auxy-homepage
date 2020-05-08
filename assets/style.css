@@ -155,18 +155,6 @@ section.bgColor::before {
     animation-fill-mode: forwards;
     animation-direction: alternate;
 }
-
-section.bgColor::after {
-    content: "";
-    background: url(./bottom.svg) no-repeat;
-    background-position: center bottom;
-    height: 150px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-size: cover;
-}
-
 section.bgColor .content {
     position: relative;
     display: flex;
@@ -235,7 +223,114 @@ section.bgColor .content img {
     100% {background-position: 100% 0;}
 }
 
+article.rounded::after {
+    content: "";
+    background: url(./bottom.svg) no-repeat;
+    background-position: center bottom;
+    height: 150px;
+    position: absolute;
+    width: 100%;
+    background-size: cover;
+    transform: scaleY(-1);
+}
+
+article.rounded {
+    width:100%;
+    height: 150px;
+}
+
+#notifications {
+    background: linear-gradient(135deg, #4B77F0, #555FC5, #555FC5);
+}
+
+#notifications img {
+    width: 65%;
+    align-self: center;
+    justify-self: center;
+    transition: .2s;
+    
+    animation: plane 3s ease-in-out infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+@keyframes plane {
+    0% {
+        transform: translate3d(10px, 10px, 0);
+    }
+    100% {
+        transform: translate3d(-15px, -10px, 0);
+    }
+}
+
+#notifications .content {
+    padding: 50px;
+    display: flex;
+    color: white;
+    width: calc(100% - 100px);
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#notifications .content section {
+    /* padding-left: 125px; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+}
+
+#notifications .content h3 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+#notifications .content h2 {
+    font-size: 3.5em;
+    margin: 0;
+}
+
+#notifications .content p {
+    font-size: 1.75em;
+    padding: 0;
+}
+
+#notifications .content .bottom button {
+    font-size: 1em;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: unset;
+    padding: 15px;
+    transition: .2s;
+
+}
+
+#notifications .content .bottom button:hover {
+    background-color:white;
+    color: #555FC5;
+    transition: .2s;
+}
+
+#features {
+    padding: 50px;
+    width: calc(100% - 100px)
+}
+
 @media (min-width: 980px) {
+    #notifications .content {
+        padding: 100px;
+        width: calc(100% - 200px);
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #notifications .content section {
+        justify-content: space-between;
+        margin-top: 0;
+    }
+
+    #notifications img {
+        width: 45%;
+    }
+ 
     .getStarted {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -270,7 +365,7 @@ section.bgColor .content img {
     }
 
     section.bgColor .content {
-        padding: 350px 160px 200px 160px;
+        padding: 350px 160px 120px 160px;
 
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));

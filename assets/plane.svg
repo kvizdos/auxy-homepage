@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="507.219" height="428.002" viewBox="0 0 507.219 428.002">
+  <g id="Paper_plane" data-name="Paper plane" transform="translate(-303.286 -2672.998)">
+    <path id="Paper_Plane_Left" data-name="Paper Plane Left" d="M303.286,2849.1l69.529,71.809L810.5,2673Z" transform="translate(0 0)" fill="#fff"/>
+    <path id="Paper_Plane_Right" data-name="Paper Plane Right" d="M412.769,2958.474l138.651,142.533L812.677,2673.33Z" transform="translate(-2.503 -0.008)" fill="#fff"/>
+    <path id="Paper_Plane_Inside_Shadow" data-name="Paper Plane Inside Shadow" d="M411.894,3010.271V2958.41L811.8,2673.233,374.485,2920.992Z" transform="translate(-1.628 -0.005)" fill="#aeaeae"/>
+    <path id="Paper_Plane_Outside_Shadow" data-name="Paper Plane Outside Shadow" d="M442.846,2996.074l-30.1-30.881v51.758Z" transform="translate(-2.502 -6.68)" fill="#575757"/>
+  </g>
+</svg>
